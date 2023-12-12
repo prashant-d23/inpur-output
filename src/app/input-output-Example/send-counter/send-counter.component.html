@@ -1,0 +1,7 @@
+
+<div class="container mt-5 p-3 bg-warning text-center">
+  <h2>Counter Value : {{initialValue}}</h2>
+</div>
+
+<app-counter [receivedCounter]="initialValue" (sendCounter)="receivedCounter($event)"></app-counter>
+

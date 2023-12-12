@@ -1,0 +1,29 @@
+<div class="container w-50 bg-black p-3 mt-5">
+  <h2 class="text-center text-white fw-bold">Registration Form</h2>
+  <form [formGroup]="registrationForm" (ngSubmit)="getForm()">
+    <div class="row">
+      <div class="col mb-3 text-white fw-bold">
+        <label for="fName" class="form-label">Full Name</label>
+        <input type="text" id="fname" name="fName" class="form-control" formControlName="fullName">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3 text-white fw-bold">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" id="email" name="email" class="form-control" formControlName="email">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <label for="pwd" class="form-label text-white fw-bold">Password</label>
+        <input type="password" id="pwd" class="form-control" formControlName="password">
+      </div>
+      <div class="col-md-6">
+        <label for="cpwd" class="form-label text-white fw-bold">Confirm Password</label>
+        <input type="password" id="cpwd" class="form-control" formControlName="confirmPassword">
+      </div>
+    </div>
+    <button type="submitss" class="btn btn-warning mt-3 fw-bold">Submit</button>
+  </form>
+</div>

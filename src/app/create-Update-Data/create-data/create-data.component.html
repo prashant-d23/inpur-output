@@ -1,0 +1,10 @@
+<h2>This is Child Component</h2>
+
+<form class="form-control">
+  <label for="username">Enter your UserName</label><br>
+  <input type="text" name="userName" id="username" [(ngModel)] = "userObj.userName"><br>
+  <label for="password">Enter Password</label><br>
+  <input type="text" name="password" id="password" [(ngModel)] = "userObj.password"><br><br>
+
+  <button (click)="collectData()" class="btn btn-info">Send</button>
+</form>

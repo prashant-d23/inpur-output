@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Create Product</h2>
+  <form>
+    <div class="mb-3">
+      <label for="id1" class="form-label">Product Name</label>
+      <input type="pName" class="form-control" id="id1" name="pname" [(ngModel)] = 'productObj.productName'>
+    </div>
+    <div class="mb-3">
+      <label for="id2" class="form-label">Quantity</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" name="pQuantity" [(ngModel)] = 'productObj.quantity'>
+    </div>
+    <div class="mb-3">
+      <label for="id3">Price</label>
+      <input type="text" class="form-control" id="id3" name="price" [(ngModel)] = 'productObj.price'>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="createProduct()">Create Product</button>
+    <button type="reset" class="btn btn-primary ms-2" (click)="reset()">Reset</button>
+  </form>
+
+</div>
+
+{{createProduct}}
+

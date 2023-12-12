@@ -1,0 +1,14 @@
+<h3>Parent component</h3>
+
+{{displayChildData | json}}
+
+<input type="text" name="input" [(ngModel)]="myName">
+
+
+
+
+
+
+
+
+<app-data-sharing-practice (customEvt)="getChildData($event)" [receivePrtData]="myName"></app-data-sharing-practice>

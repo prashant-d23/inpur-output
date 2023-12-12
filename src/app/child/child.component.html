@@ -1,0 +1,8 @@
+<h1>Child Component</h1>
+<h5>Message Received from Parent Component : {{dataReceivedFromParent}} </h5>
+
+
+<!--sending data to parent -->
+<label for="">Reply</label><br>
+<input type="text" name="replydata" [(ngModel)]="replyData">
+<button class="btn btn-primary" (click)="sendData()">Send</button>

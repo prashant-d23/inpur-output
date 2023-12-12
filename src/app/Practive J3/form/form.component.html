@@ -1,0 +1,16 @@
+
+<h2>Registration Form</h2>
+
+<div class="container mt-5 p-3 bg-warning w-50">
+  <form>
+    <div class="mb-3">
+      <label for="userName" class="form-label">UserName</label>
+      <input type="text" class="form-control" name="uName" id="userName" [(ngModel)]="myForm.userName">
+    </div>
+    <div class="mb-3">
+      <label for="pwd" class="form-label">Password</label>
+      <input type="text" class="form-control" name="password" id="pwd" [(ngModel)]="myForm.password">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="sendInfo()">Submit</button>
+  </form>
+</div>

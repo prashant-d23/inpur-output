@@ -1,0 +1,30 @@
+<h2>User Details</h2>
+
+<div class="container mt-4">
+  <table class="table table-primary w-50">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>User Name</th>
+        <th>Password</th>
+        <th>Mobile Number</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of receivedList; let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{user.userName}}</td>
+        <td>{{user.password}}</td>
+        <td>{{user.mobileNumber}}</td>
+        <td>
+          <button (click)="editDetails(i)">Edit</button>
+          <button (click)="deleteDetails()">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<app-user-form (sendForm)="getUserForm($event)" [editData] = 'selectedUser'></app-user-form>

@@ -1,0 +1,25 @@
+
+<div class="container">
+  <table class="table table-hover">
+
+    <thead>
+      <tr>
+        <th>Sr.No</th>
+        <th>UserName</th>
+        <th>Password</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let user of renderData;let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{user.userName}}</td>
+        <td>{{user.password}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+<app-get-user-details (childEvent)="getChildDetails($event)"></app-get-user-details>

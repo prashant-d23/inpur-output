@@ -1,0 +1,20 @@
+
+<div class="container mt-5">
+  <h3>Child Component</h3>
+  <div class="mb-3">
+    <label for="firstName">First Name</label>
+    <input type="text" name="firstName" [(ngModel)]="userDetails.firstName">
+  </div>
+  <div class="mb-3">
+    <label for="lastName">Last Name</label>
+    <input type="text" name="lastName" [(ngModel)]="userDetails.lastName">
+  </div>
+  <div class="mb-3">
+    <label for="email">email</label>
+    <input type="text" name="email"[(ngModel)]="userDetails.email">
+  </div>
+
+  <button (click)='getData()'>Submit</button>
+</div>
+
+<h3>{{receivePrtData}}</h3>

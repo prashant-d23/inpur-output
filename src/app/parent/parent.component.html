@@ -1,0 +1,17 @@
+<h1>Parent Component</h1>
+
+<div class="container">
+  <label for="id1">Enter the Message</label>
+<input type="text" [(ngModel)] = "message" name="msg">
+</div>
+
+<!--using property binding we are receiving the msg property-->
+we need that emitted data from that custom event so we need to use $event
+<app-child [dataReceivedFromParent]="message" (emitChildData)="getDataFromChild($event)"></app-child>
+<!--
+  method used to get data in the parent component
+  emitChildData is event
+  we have to catch the thrown data from child component
+-->
+
+<h2>Data Received From Child : {{dataReceivedFromChild}}</h2>

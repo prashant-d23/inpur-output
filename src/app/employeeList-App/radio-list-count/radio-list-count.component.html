@@ -1,0 +1,11 @@
+<div class="container mt-5 ">
+  <form class="form-control bg-info"><br>
+    <input type="radio" name="radiobtn" id="id1" value="Angular Developer" (change)="devCheck($event)">&nbsp;
+    <label for="id1" class="mt-3">Angular Developer({{angCount}})</label> <br><br>
+
+    <input type="radio" name="radiobtn" value="Java Developer" id="id2" (change)="devCheck($event)" >&nbsp;
+    <label for="id2" class="mb-3">Java Developer({{javaCount}})</label>
+
+    <!-- <button (click)="getList()">getList</button> -->
+  </form>
+</div>

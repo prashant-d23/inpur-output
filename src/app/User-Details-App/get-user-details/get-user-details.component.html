@@ -1,0 +1,12 @@
+<div class="container">
+  <form class="form-control">
+    <label for="userName">UserName</label><br>
+    <input type="text" name="userName" id="userName" [(ngModel)] = 'userObj.userName'><br><br>
+
+    <label for="password">Password</label><br>
+    <input type="text" name="password" id="password" [(ngModel)] = 'userObj.password'><br><br>
+
+    <button class="btn btn-outline-primary ms-2" (click)="sendData()">Send Data</button>
+    <button class="btn btn-outline-primary ms-2" (click)="reset()">Reset</button>
+  </form>
+</div>

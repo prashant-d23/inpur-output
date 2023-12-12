@@ -1,0 +1,57 @@
+
+<div class="container w-50 bg-info p-3 my-5">
+<form [formGroup]="userForm" (ngSubmit)="submitForm()">
+  <div class="row">
+    <div class="mb-3">
+      <label for="fName" class="form-label">Full Name</label>
+      <input type="text" class="form-control" id="fName" formControlName="fullName">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="text" class="form-control" id="email" formControlName="email">
+    </div>
+
+    <div class="col-md-6">
+      <label for="password" class="form-label">Password</label>
+      <input type="text" class="form-control" id="password" formControlName="password">
+
+      <div class="row" *ngIf="password?.invalid && password?.touched">
+        <div class="invalid-feedback d-block" *ngIf="password?.errors?.['required']">This field is required</div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="cPassword" class="form-label">ConfirmPassword</label>
+      <input type="text" class="form-control" id="cPassword" formControlName="confirmPassword">
+      <div class="row" *ngIf="confirmPassword?.invalid && confirmPassword?.touched">
+        <div class="invalid-feedback d-block" *ngIf="confirmPassword?.errors?.['required']">This field is required</div>
+        <div class="invalid-feedback d-block" *ngIf="confirmPassword?.errors?.['validPass']">Password didn't match</div>
+
+      </div>
+    </div>
+   </div>
+
+   <div class="mb-3">
+    <label for="mob" class="form-label">Mobile Number</label>
+    <input type="text" class="form-control" id="mob" formControlName="mobileNumber">
+  </div>
+
+    <div class="mb-3">
+      <label for="state" class="form-label">State</label>
+      <select name="state" id="state" class="form-control" formControlName="state">
+        <option value="">Select State</option>
+        <option></option>
+      </select>
+
+
+    <div class="mb-3">
+      <label for="city" class="form-label">City</label>
+      <select name="city" id="city" class="form-control" formControlName="city">
+        <option value="">Select City</option>
+        <option value=""></option>
+      </select>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-warning">Submit</button>
+</form>
+</div>

@@ -1,0 +1,22 @@
+<div class="container w-25 mt-5 bg-info p-2">
+  <h2 class="text-center mb-3 bg-warning">User Form</h2>
+
+  <form [formGroup]="userForm" (ngSubmit)="submitForm()">
+    <div class="mb-3">
+      <label for="uName" class="form-label">User Name</label>
+      <input type="text" name="userName" class="form-control" formControlName="userName">
+    </div>
+    <div class="mb-3">
+      <label for="pwd" class="form-label">Password</label>
+      <input type="text" name="password" class="form-control" formControlName="password">
+    </div>
+    <div class="mb-3">
+      <label for="mob" class="form-label">Mobile Number</label>
+      <input type="text" name="mobileNumber" class="form-control" formControlName="mobileNumber">
+    </div>
+    <button type="submit" class="btn btn-secondary">Submit</button>
+  </form>
+</div>
+
+
+

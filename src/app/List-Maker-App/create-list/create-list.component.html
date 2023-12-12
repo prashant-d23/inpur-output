@@ -1,0 +1,20 @@
+<div class="container mt-5">
+
+  <form>
+    <div class="mb-3">
+      <label for="id1" class="form-label">Product Name</label>
+      <input type="text" class="form-control" id="id1" name="productName" [(ngModel)] = "productListObj.productName">
+    </div>
+    <div class="mb-3">
+      <label for="id3" class="form-label">Price</label>
+      <input type="text" class="form-control" id="id3" name="price" [(ngModel)] = 'productListObj.quantity'>
+    </div>
+    <div class="mb-3">
+      <label for="id2" class="form-label">Quantity</label>
+      <input type="text" class="form-control" id="id2" name="quantity" [(ngModel)] = 'productListObj.price'>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="collectData()">Add Product</button>
+    <button type="reset" class="btn btn-danger ms-2">Reset</button>
+  </form>
+
+</div>
